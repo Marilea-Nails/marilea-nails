@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marilea Nails</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Segoe UI, serif;background:#fdf8f6;color:#5a3a3a}
+.top-banner{background:#f9e8e6;text-align:center;padding:35px 20px}
+.top-banner h1{font-size:32px}
+nav{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;position:sticky;top:0;border-bottom:1px solid #eee;z-index:10}
+.logo{font-weight:900;color:#a75d6b;font-size:20px}
+.nav-links a{margin:0 10px;text-decoration:none;color:#5a3a3a;font-weight:600}
+.welcome{padding:70px 20px;text-align:center;background:#fff}
+.welcome h2{font-size:28px;margin-bottom:15px}
+.welcome span{color:#a75d6b}
+.btn-primary{background:#a75d6b;color:#fff;padding:12px 24px;border-radius:25px;text-decoration:none;display:inline-block;margin-top:15px;font-weight:700}
+.products{padding:60px 20px;text-align:center}
+.grid{max-width:1100px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:#fff;padding:12px;border-radius:18px;box-shadow:0 6px 15px rgba(0,0,0,0.06);text-align:center}
+.card img{width:100%;height:240px;object-fit:cover;border-radius:14px;cursor:pointer}
+.card h3{margin:10px 0 5px}
+.price{color:#a75d6b;font-weight:800;margin:5px 0}
+.btn-beli{background:#a75d6b;color:#fff;border:none;padding:9px 12px;border-radius:20px;width:100%;cursor:pointer;font-weight:700;margin-top:10px;font-size:14px}
+.contact{background:#fdf2f0;padding:60px 20px;text-align:center}
+.contact-box{max-width:900px;margin:25px auto;display:flex;gap:20px;flex-wrap:wrap;text-align:left}
+.contact-info,.contact-form{flex:1;min-width:280px;background:#fff;padding:22px;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+.contact-form input{width:100%;padding:11px;margin-bottom:12px;border-radius:10px;border:1px solid #e0c2bd}
+.footer{margin-top:40px;color:#999;font-size:13px}
+#choiceModal,#imgModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:99}
+.choice-box{background:#fff;padding:28px;border-radius:22px;text-align:center;min-width:300px;max-width:90%}
+.choice-btn{display:block;width:100%;padding:12px;margin:12px 0;border-radius:12px;text-decoration:none;font-weight:700}
+.wa{background:#25D366;color:#fff}.tiktok{background:#000;color:#fff}
+.close-btn{background:#eee;border:none;width:100%;padding:10px;border-radius:12px;cursor:pointer;margin-top:5px}
+#imgModal img{max-width:90%;max-height:80%;border-radius:14px}
+.close-x{position:absolute;top:20px;right:30px;color:#fff;font-size:35px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+<div class="top-banner"><h1>Marilea Nails</h1><p>Beauty at Your Fingertips</p></div>
+<nav><div class="logo">Marilea</div><div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a></div></nav>
+</header>
+
+<section id="home" class="welcome">
+<h2>Welcome to <span>Marilea Nails</span></h2>
+<p>Handmade press-on nails cantik dari Suradita, Banten. Cantik tanpa harus ke salon mahal!<br>Kualitas premium, harga mulai Rp35.000 aja!</p>
+<a href="#products" class="btn-primary">Lihat Koleksi</a>
+</section>
+
+<section id="about" class="welcome" style="background:#fdf2f0">
+<h2>About Us</h2>
+<p style="max-width:700px;margin:15px auto">Marilea Nails adalah brand press-on nails lokal dari Suradita, Cisauk, Tangerang. Dibuat dengan cinta, desain kekinian, dan lem yang kuat. Cocok buat daily, kondangan, atau foto OOTD!</p>
+</section>
+
+<section id="products" class="products">
+<h2>Our Products</h2>
+<p>5 koleksi best seller kami</p>
+<div class="grid">
+<div class="card"><img src="nail-40k.jpg" onclick="openImg(this.src)"><h3>Coco Monster Pop</h3><div class="price">Rp40.000</div><button class="btn-beli" onclick="openChoice('Coco Monster Pop')">Beli</button></div>
+<div class="card"><img src="nail-cherry.jpg" onclick="openImg(this.src)"><h3>Cherry Blossom</h3><div class="price">Rp35.000</div><button class="btn-beli" onclick="openChoice('Cherry Blossom')">Beli</button></div>
+<div class="card"><img src="nail-blue.jpg" onclick="openImg(this.src)"><h3>Ocean Blue Star</h3><div class="price">Rp35.000</div><button class="btn-beli" onclick="openChoice('Ocean Blue Star')">Beli</button></div>
+<div class="card"><img src="nail-star.jpg" onclick="openImg(this.src)"><h3>Midnight Star</h3><div class="price">Rp35.000</div><button class="btn-beli" onclick="openChoice('Midnight Star')">Beli</button></div>
+<div class="card"><img src="nail-babyblue.jpg" onclick="openImg(this.src)"><h3>Baby Blue Flower</h3><div class="price">Rp35.000</div><button class="btn-beli" onclick="openChoice('Baby Blue Flower')">Beli</button></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<div class="contact-box">
+<div class="contact-info">
+<p><b>📍 Lokasi:</b> Suradita, Cisauk, Tangerang, Banten 15341</p><br>
+<p><b>💬 WhatsApp:</b> 0813-1525-3019</p>
+<p><b>🎵 TikTok:</b> @tutut964</p>
+<p><b>🕘 Jam:</b> Senin - Sabtu 09.00-20.00 WIB</p><br>
+<a href="https://wa.me/6281315253019" target="_blank" class="btn-primary" style="font-size:14px">Chat WhatsApp Sekarang</a>
+</div>
+<div class="contact-form">
+<p style="margin-bottom:10px;font-weight:700">Mau order cepat?</p>
+<input type="text" id="name" placeholder="Nama kamu">
+<input type="text" id="pesan" placeholder="Mau order apa?">
+<button onclick="kirimForm()" class="btn-primary" style="width:100%;border:none;cursor:pointer">Kirim ke WA</button>
+</div>
+</div>
+<p class="footer">© 2025 Marilea Nails - Suradita, Banten</p>
+</section>
+
+<div id="choiceModal"><div class="choice-box"><h3 id="choiceTitle">Beli Produk</h3><p style="margin:10px 0">Pilih mau beli lewat mana:</p><a id="waLink" href="#" target="_blank" class="choice-btn wa">💬 Beli via WhatsApp</a><a href="https://www.tiktok.com/@tutut964" target="_blank" class="choice-btn tiktok">🎵 Lihat di TikTok Shop</a><button class="close-btn" onclick="closeChoice()">Batal</button></div></div>
+<div id="imgModal"><span class="close-x" onclick="closeImg()">&times;</span><img id="modalImg"></div>
+
+<script>
+function openChoice(nama){
+document.getElementById('choiceTitle').innerText="Beli "+nama;
+document.getElementById('waLink').href="https://wa.me/6281315253019?text=Halo Marilea Nails, aku mau order "+encodeURIComponent(nama);
+document.getElementById('choiceModal').style.display='flex';
+}
+function closeChoice(){document.getElementById('choiceModal').style.display='none';}
+function openImg(s){document.getElementById('imgModal').style.display='flex';document.getElementById('modalImg').src=s;}
+function closeImg(){document.getElementById('imgModal').style.display='none';}
+function kirimForm(){let n=document.getElementById('name').value;let p=document.getElementById('pesan').value;if(!n||!p){alert('Isi nama dan pesanan dulu ya!');return;}window.open("https://wa.me/6281315253019?text=Halo saya "+encodeURIComponent(n)+", "+encodeURIComponent(p),"_blank");}
+</script>
+</body>
+</html>
