@@ -6,11 +6,11 @@
 <title>Marilea Nails</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Segoe UI, serif;background:#fdf8f6;color:#5a3a3a}
-.top-banner{background:#f9e8e6;text-align:center;padding:35px 20px}
-.top-banner h1{font-size:32px}
-nav{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;position:sticky;top:0;border-bottom:1px solid #eee;z-index:10}
-.logo{font-weight:900;color:#a75d6b;font-size:20px}
+body{font-family:Segoe UI, serif;background:#fdf8f6;color:#5a3a3a;padding-bottom:70px}
+.top-banner{background:#f9e8e6;text-align:center;padding:25px 20px}
+.top-banner img{height:95px;width:auto}
+nav{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;position:sticky;top:0;border-bottom:1px solid #eee;z-index:10}
+.logo img{height:42px;width:auto}
 .nav-links a{margin:0 10px;text-decoration:none;color:#5a3a3a;font-weight:600}
 .welcome{padding:70px 20px;text-align:center;background:#fff}
 .welcome h2{font-size:28px;margin-bottom:15px}
@@ -35,25 +35,24 @@ nav{background:#fff;display:flex;justify-content:space-between;align-items:cente
 .close-btn{background:#eee;border:none;width:100%;padding:10px;border-radius:12px;cursor:pointer;margin-top:5px}
 #imgModal img{max-width:90%;max-height:80%;border-radius:14px}
 .close-x{position:absolute;top:20px;right:30px;color:#fff;font-size:35px;cursor:pointer}
+.bottom-bar{position:fixed;bottom:0;left:0;width:100%;background:#fff;padding:10px;display:flex;gap:8px;box-shadow:0 -2px 10px rgba(0,0,0,0.1);z-index:100}
+.bottom-bar a{flex:1;padding:12px;border-radius:20px;text-align:center;text-decoration:none;font-weight:bold;color:#fff}
 </style>
 </head>
 <body>
 <header>
-<div class="top-banner"><h1>Marilea Nails</h1><p>Beauty at Your Fingertips</p></div>
-<nav><div class="logo">Marilea</div><div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a></div></nav>
+<div class="top-banner"><img src="logo.png" alt="Marilea Nails"><p>Beauty at Your Fingertips</p></div>
+<nav><div class="logo"><img src="logo.png" alt="Marilea"></div><div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a></div></nav>
 </header>
-
 <section id="home" class="welcome">
 <h2>Welcome to <span>Marilea Nails</span></h2>
 <p>Handmade press-on nails cantik dari Suradita, Banten. Cantik tanpa harus ke salon mahal!<br>Kualitas premium, harga mulai Rp35.000 aja!</p>
 <a href="#products" class="btn-primary">Lihat Koleksi</a>
 </section>
-
 <section id="about" class="welcome" style="background:#fdf2f0">
 <h2>About Us</h2>
 <p style="max-width:700px;margin:15px auto">Marilea Nails adalah brand press-on nails lokal dari Suradita, Cisauk, Tangerang. Dibuat dengan cinta, desain kekinian, dan lem yang kuat. Cocok buat daily, kondangan, atau foto OOTD!</p>
 </section>
-
 <section id="products" class="products">
 <h2>Our Products</h2>
 <p>5 koleksi best seller kami</p>
@@ -65,7 +64,6 @@ nav{background:#fff;display:flex;justify-content:space-between;align-items:cente
 <div class="card"><img src="nail-babyblue.jpg" onclick="openImg(this.src)"><h3>Baby Blue Flower</h3><div class="price">Rp35.000</div><button class="btn-beli" onclick="openChoice('Baby Blue Flower')">Beli</button></div>
 </div>
 </section>
-
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
 <div class="contact-box">
@@ -83,18 +81,16 @@ nav{background:#fff;display:flex;justify-content:space-between;align-items:cente
 <button onclick="kirimForm()" class="btn-primary" style="width:100%;border:none;cursor:pointer">Kirim ke WA</button>
 </div>
 </div>
-<p class="footer">© 2025 Marilea Nails - Suradita, Banten</p>
+<p class="footer">© 2026 Marilea Nails - Suradita, Banten</p>
 </section>
-
 <div id="choiceModal"><div class="choice-box"><h3 id="choiceTitle">Beli Produk</h3><p style="margin:10px 0">Pilih mau beli lewat mana:</p><a id="waLink" href="#" target="_blank" class="choice-btn wa">💬 Beli via WhatsApp</a><a href="https://www.tiktok.com/@tutut964" target="_blank" class="choice-btn tiktok">🎵 Lihat di TikTok Shop</a><button class="close-btn" onclick="closeChoice()">Batal</button></div></div>
 <div id="imgModal"><span class="close-x" onclick="closeImg()">&times;</span><img id="modalImg"></div>
-
+<div class="bottom-bar">
+<a href="https://wa.me/6281315253019" style="background:#25D366">💬 Chat WA</a>
+<a href="https://www.tiktok.com/@tutut964" target="_blank" style="background:#000">🎵 TikTok Shop</a>
+</div>
 <script>
-function openChoice(nama){
-document.getElementById('choiceTitle').innerText="Beli "+nama;
-document.getElementById('waLink').href="https://wa.me/6281315253019?text=Halo Marilea Nails, aku mau order "+encodeURIComponent(nama);
-document.getElementById('choiceModal').style.display='flex';
-}
+function openChoice(nama){document.getElementById('choiceTitle').innerText="Beli "+nama;document.getElementById('waLink').href="https://wa.me/6281315253019?text=Halo Marilea Nails, aku mau order "+encodeURIComponent(nama);document.getElementById('choiceModal').style.display='flex';}
 function closeChoice(){document.getElementById('choiceModal').style.display='none';}
 function openImg(s){document.getElementById('imgModal').style.display='flex';document.getElementById('modalImg').src=s;}
 function closeImg(){document.getElementById('imgModal').style.display='none';}
